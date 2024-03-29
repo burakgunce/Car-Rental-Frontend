@@ -17,6 +17,11 @@ import { OperationClaimComponent } from './components/admin/operation-claim/oper
 import { RentalComponent } from './components/admin/rental/rental.component';
 import { UserOperationClaimComponent } from './components/admin/user-operation-claim/user-operation-claim.component';
 import { UserComponent } from './components/admin/user/user.component';
+import { CardItemsComponent } from './components/home/card-items/card-items.component';
+import { HomeLayoutComponent } from './components/home/home-layout/home-layout.component';
+import { LastRentalListComponent } from './components/home/last-rental-list/last-rental-list.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { UserComponent } from './components/admin/user/user.component';
     OperationClaimComponent,
     RentalComponent,
     UserOperationClaimComponent,
-    UserComponent
+    UserComponent,
+    CardItemsComponent,
+    HomeLayoutComponent,
+    LastRentalListComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
