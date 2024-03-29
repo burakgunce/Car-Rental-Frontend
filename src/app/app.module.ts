@@ -22,6 +22,13 @@ import { HomeLayoutComponent } from './components/home/home-layout/home-layout.c
 import { LastRentalListComponent } from './components/home/last-rental-list/last-rental-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CarDetailFilterComponent } from './components/site/car-detail-filter/car-detail-filter.component';
+import { CarDetailMenuComponent } from './components/site/car-detail-menu/car-detail-menu.component';
+import { CarDetailPageComponent } from './components/site/car-detail-page/car-detail-page.component';
+import { RentThisCarComponent } from './components/site/rent-this-car/rent-this-car.component';
+import { RentalDetailHistoryComponent } from './components/site/rental-detail-history/rental-detail-history.component';
+import { SiteLayoutComponent } from './components/site/site-layout/site-layout.component';
+import { SiteNavbarComponent } from './components/site/site-navbar/site-navbar.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +50,14 @@ import { RegisterComponent } from './components/register/register.component';
     HomeLayoutComponent,
     LastRentalListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CarDetailFilterComponent,
+    CarDetailMenuComponent,
+    CarDetailPageComponent,
+    RentThisCarComponent,
+    RentalDetailHistoryComponent,
+    SiteLayoutComponent,
+    SiteNavbarComponent
   ],
   imports: [
     BrowserModule,
