@@ -75,6 +75,20 @@ import { UserUpdateComponent } from './components/admin/user/user-update/user-up
 import { UserViewComponent } from './components/admin/user/user-view/user-view.component';
 
 import { ToastrModule } from 'ngx-toastr';
+import { BrandFilterPipePipe } from './pipes/brand-filter-pipe.pipe';
+import { CarDetailDescriptionFilterPipePipe } from './pipes/car-detail-description-filter-pipe.pipe';
+import { CarDetailModelFilterPipePipe } from './pipes/car-detail-model-filter-pipe.pipe';
+import { ColorFilterPipePipe } from './pipes/color-filter-pipe.pipe';
+import { CustomerDetailFirstNameFilterPipePipe } from './pipes/customer-detail-first-name-filter-pipe.pipe';
+import { HideFirstNamePipePipe } from './pipes/hide-first-name-pipe.pipe';
+import { HideLastNamePipePipe } from './pipes/hide-last-name-pipe.pipe';
+import { ModelColorDetailFilterPipePipe } from './pipes/model-color-detail-filter-pipe.pipe';
+import { ModelDetailFilterPipePipe } from './pipes/model-detail-filter-pipe.pipe';
+import { OperationClaimFilterPipePipe } from './pipes/operation-claim-filter-pipe.pipe';
+import { RentalDetailFirstNameFilterPipePipe } from './pipes/rental-detail-first-name-filter-pipe.pipe';
+import { UserFilterPipePipe } from './pipes/user-filter-pipe.pipe';
+import { UserLastNameFilterPipePipe } from './pipes/user-last-name-filter-pipe.pipe';
+import { UserOperationClaimDetailFilterPipePipe } from './pipes/user-operation-claim-detail-filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -145,7 +159,21 @@ import { ToastrModule } from 'ngx-toastr';
     UserListComponent,
     UserRemoveComponent,
     UserUpdateComponent,
-    UserViewComponent
+    UserViewComponent,
+    BrandFilterPipePipe,
+    CarDetailDescriptionFilterPipePipe,
+    CarDetailModelFilterPipePipe,
+    ColorFilterPipePipe,
+    CustomerDetailFirstNameFilterPipePipe,
+    HideFirstNamePipePipe,
+    HideLastNamePipePipe,
+    ModelColorDetailFilterPipePipe,
+    ModelDetailFilterPipePipe,
+    OperationClaimFilterPipePipe,
+    RentalDetailFirstNameFilterPipePipe,
+    UserFilterPipePipe,
+    UserLastNameFilterPipePipe,
+    UserOperationClaimDetailFilterPipePipe
   ],
   imports: [
     BrowserModule,
