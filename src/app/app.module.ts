@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -71,6 +73,8 @@ import { UserListComponent } from './components/admin/user/user-list/user-list.c
 import { UserRemoveComponent } from './components/admin/user/user-remove/user-remove.component';
 import { UserUpdateComponent } from './components/admin/user/user-update/user-update.component';
 import { UserViewComponent } from './components/admin/user/user-view/user-view.component';
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -146,7 +150,12 @@ import { UserViewComponent } from './components/admin/user/user-view/user-view.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClient
+    HttpClient,
+    FormsModule,
+    ToastrModule.forRoot({
+      positionClass: "toast-bottom-right"
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
