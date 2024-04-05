@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -89,6 +95,11 @@ import { RentalDetailFirstNameFilterPipePipe } from './pipes/rental-detail-first
 import { UserFilterPipePipe } from './pipes/user-filter-pipe.pipe';
 import { UserLastNameFilterPipePipe } from './pipes/user-last-name-filter-pipe.pipe';
 import { UserOperationClaimDetailFilterPipePipe } from './pipes/user-operation-claim-detail-filter-pipe.pipe';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -184,9 +195,19 @@ import { UserOperationClaimDetailFilterPipePipe } from './pipes/user-operation-c
     ToastrModule.forRoot({
       positionClass: "toast-bottom-right"
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    PerfectScrollbarModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
