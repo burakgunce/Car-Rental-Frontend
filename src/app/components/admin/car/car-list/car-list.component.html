@@ -1,1 +1,61 @@
-<p>car-list works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Cars</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cars</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row view-filter mb-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-success" routerLink="/admin/cars/add"><i
+                    class="fa fa-plus-circle fa-lg"></i></button>
+              </div>
+              <div class="float-left">
+                <div>
+                  <label>
+                    <input type="search" class="form-control form-control-sm" placeholder="Search By Model Name"
+                      [(ngModel)]="filterText">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="data-table dataTable data-table-feature table-hover table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Year</th>
+                <th scope="col">Color</th>
+                <th scope="col">Daily Price</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let carDetail of carDetails | carDetailModelFilterPipe: filterText; let i = index"
+                (click)="getCarDetailViewById(carDetail.id)">
+                <td><b>{{i + 1}}</b></td>
+                <td>{{carDetail.brandName}}</td>
+                <td>{{carDetail.modelName}}</td>
+                <td>{{carDetail.modelYear}}</td>
+                <td>{{carDetail.colorName}}</td>
+                <td>{{carDetail.dailyPrice}}</td>
+                <td>{{carDetail.description | carDetailDescriptionFilterPipe}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

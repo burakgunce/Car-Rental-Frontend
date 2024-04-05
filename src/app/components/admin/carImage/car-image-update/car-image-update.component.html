@@ -1,1 +1,55 @@
-<p>car-image-update works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Update</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/carimages/list">Car Images</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Update</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+  
+    <div class="col-12">
+      <div class="card mb-4">
+        <div class="card-header">
+          <div class="ml-2 mt-3">
+            <button type="button" class="btn btn-primary" routerLink="/admin/carimages/view/{{carImageDetail.id}}"
+              *ngIf="carImageDetail"><i class="fa fa-arrow-left"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="carImageUpdateForm" (ngSubmit)="updateCarImage()" *ngIf="carImageUpdateForm">
+            <div class="form-group">
+              <label for="carId">Car</label>
+              <select formControlName="carId" id="carId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="carDetail.id" *ngFor="let carDetail of carDetails">{{carDetail.modelName + " " +
+                  carDetail.modelYear + " " + carDetail.brandName + " (" + (carDetail.colorName | uppercase) + "), " +
+                  (carDetail.dailyPrice | currency)}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <div class="custom-file">
+                  <input id="file" type="file" class="form-control custom-file-input"
+                    accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff" (change)="onFileChange($event)">
+                  <label for="file" class="form-label custom-file-label">
+                    <div *ngIf="fileName">{{fileName}}</div>
+                  </label>
+                </div>
+                <div class="input-group-append">
+                  <span class="input-group-text">Upload</span>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-warning mb-0 mt-1">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
