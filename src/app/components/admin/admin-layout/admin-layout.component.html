@@ -1,1 +1,113 @@
-<p>admin-layout works!</p>
+<body id="app-container" class="ltr rounded menu-default show-spinner menu-sub-hidden">
+    
+    <div class="menu">
+      <div class="main-menu">
+        <div class="ps" style="position: relative; max-width: 100%; max-height: 100%;" [perfectScrollbar]="config">
+          <ul class="list-unstyled">
+            <li [class]="checkActive(dashboardActivate)" (click)="setAndRemoveActive('')">
+              <a routerLink="/admin">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li [class]="checkActive(brandActive)" (click)="setAndRemoveActive('brands')">
+              <a routerLink="/admin/brands/list">
+                <i class="fa fa-industry" aria-hidden="true"></i>
+                <span>Brands</span>
+              </a>
+            </li>
+            <li [class]="checkActive(carActive)" (click)="setAndRemoveActive('cars')">
+              <a routerLink="/admin/cars/list">
+                <i class="fa fa-car" aria-hidden="true"></i>
+                <span>Cars</span>
+              </a>
+            </li>
+            <li [class]="checkActive(carImageActive)" (click)="setAndRemoveActive('carimages')">
+              <a routerLink="/admin/carimages/list">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <span>Car Images</span>
+              </a>
+            </li>
+            <li [class]="checkActive(colorActive)" (click)="setAndRemoveActive('colors')">
+              <a routerLink="/admin/colors/list">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                <span>Colors</span>
+              </a>
+            </li>
+            <li [class]="checkActive(rentalActive)" (click)="setAndRemoveActive('rentals')">
+              <a routerLink="/admin/rentals/list">
+                <i class="fa fa-folder-open" aria-hidden="true"></i>
+                <span>Rentals</span>
+              </a>
+            </li>
+            <li [class]="checkActive(customerActive)" (click)="setAndRemoveActive('customers')">
+              <a routerLink="/admin/customers/list">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li [class]="checkActive(userActive)" (click)="setAndRemoveActive('users')">
+              <a routerLink="/admin/users/list">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <span>Users</span>
+              </a>
+            </li>
+            <li [class]="checkActive(operationClaimActive)" (click)="setAndRemoveActive('operationclaims')">
+              <a routerLink="/admin/operationclaims/list">
+                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                <span>Operation Claims</span>
+              </a>
+            </li>
+            <li [class]="checkActive(userOperationClaimActive)" (click)="setAndRemoveActive('useroperationclaims')">
+              <a routerLink="/admin/useroperationclaims/list">
+                <i class="fa fa-address-book" aria-hidden="true"></i>
+                <span>User Operation Claims</span>
+              </a>
+            </li>
+            <li [class]="checkActive(modelActive)" (click)="setAndRemoveActive('models')">
+              <a routerLink="/admin/models/list">
+                <i class="fa fa-taxi" aria-hidden="true"></i>
+                <span>Models</span>
+              </a>
+            </li>
+            <li [class]="checkActive(modelColorActive)" (click)="setAndRemoveActive('modelcolors')">
+              <a routerLink="/admin/modelcolors/list">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                <span>Model Colors</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  
+    <footer class="page-footer">
+      <div class="footer-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <p class="mb-0 text-muted">ColoredStrategies 2019</p>
+            </div>
+            <div class="col-sm-6 d-none d-sm-block">
+              <ul class="breadcrumb pt-0 pr-0 float-right">
+                <li class="breadcrumb-item mb-0">
+                  <a href="#" class="btn-link">Review</a>
+                </li>
+                <li class="breadcrumb-item mb-0">
+                  <a href="#" class="btn-link">Purchase</a>
+                </li>
+                <li class="breadcrumb-item mb-0">
+                  <a href="#" class="btn-link">Docs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
