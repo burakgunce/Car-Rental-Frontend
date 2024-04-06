@@ -1,1 +1,64 @@
-<p>register works!</p>
+<div class="row d-flex justify-content-center align-items-center h-100 mt-5">
+    <div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-5">
+      <div class="card border border-primary" style="border-radius: 15px;">
+        <div class="card-body p-5">
+          <div class="row view-filter mb-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-secondary" routerLink="/site">GO TO EXPLORE
+                  PAGE</button>
+              </div>
+              <div class="float-left">
+                <div>
+                  <label>
+                    <button type="button" class="btn btn-secondary" routerLink="/">GO TO MAIN
+                      PAGE</button> </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+  
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
+  
+            <div class="form-outline mb-3 text-center">
+              <label class="form-label fw-bold text-decoration-underline" for="formFirstName">First Name</label>
+              <input formControlName="firstName" type="text" id="formFirstName" class="form-control form-control-lg" />
+              <small *ngIf="firstName && firstName.invalid && (firstName.dirty || firstName.touched)"
+                class="text-danger">You should fill your First Name!</small>
+            </div>
+  
+            <div class="form-outline mb-3 text-center">
+              <label class="form-label fw-bold text-decoration-underline" for="formLastName">Last Name</label>
+              <input formControlName="lastName" type="text" id="formLastName" class="form-control form-control-lg" />
+              <small *ngIf="lastName && lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger">You
+                should fill your Last Name!</small>
+            </div>
+  
+            <div class="form-outline mb-3 text-center">
+              <label class="form-label fw-bold text-decoration-underline" for="formEmail">Email</label>
+              <input formControlName="email" type="email" id="formEmail" class="form-control form-control-lg" />
+              <small *ngIf="email && email.invalid && (email.dirty || email.touched)" class="text-danger">Enter a valid
+                Email! name@example.com</small>
+            </div>
+  
+            <div class="form-outline mb-3 text-center">
+              <label class="form-label fw-bold text-decoration-underline" for="formPassword">Password</label>
+              <input formControlName="password" type="password" id="formPassword" class="form-control form-control-lg" />
+              <small *ngIf="password && password.invalid && (password.dirty || password.touched)"
+                class="text-danger">Password should be atleast 5 character</small>
+            </div>
+  
+            <div class="d-flex justify-content-center mt-5">
+              <button class="btn btn-success btn-block btn-lg">Register</button>
+            </div>
+  
+          </form>
+  
+          <p class="text-center text-muted mt-5 mb-0">Have already an account? <a routerLink="/login"
+              class="fw-bold text-body"><u>Login here</u></a></p>
+  
+        </div>
+      </div>
+    </div>
+  </div>

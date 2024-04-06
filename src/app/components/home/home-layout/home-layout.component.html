@@ -1,1 +1,543 @@
-<p>home-layout works!</p>
+<body class="show-spinner no-footer">
+    <div class="landing-page">
+      <div class="mobile-menu"><a href="#home" class="logo-mobile scrollTo"><span></span></a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#features" class="scrollTo">FEATURES</a></li>
+          <li class="nav-item"><a href="#layouts" class="scrollTo">LAYOUTS</a></li>
+          <li class="nav-item"><a href="#components" class="scrollTo">COMPONENTS</a></li>
+          <li class="nav-item"><a href="#apps" class="scrollTo">APPS</a></li>
+          <li class="nav-item"><a href="#themes" class="scrollTo">THEMES</a></li>
+          <li class="nav-item">
+            <div class="separator"></div>
+          </li>
+          <li class="nav-item pl-4"><a href="#themes" class="scrollTo">THEMES</a></li>
+        </ul>
+      </div>
+      <div class="main-container">
+        <nav class="landing-page-nav headroom headroom--not-bottom headroom--top">
+          <div class="container d-flex align-items-center justify-content-between"><a
+              class="navbar-logo pull-left scrollTo" href="#home"><span class="white"></span> <span
+                class="dark"></span></a>
+            <ul class="navbar-nav d-none d-lg-flex flex-row">
+              <li class="nav-item"><a routerLink="/login" class="scrollTo">LOGIN</a></li>
+              <li class="nav-item"><a routerLink="/register" class="scrollTo">REGISTER</a></li>
+              <li class="nav-item pl-4"><a class="btn btn-outline-semi-light btn-sm pr-4 pl-4" target="_top"
+                  routerLink="/site">EXPLORE</a></li>
+            </ul><a href="#" class="mobile-menu-button"><i class="simple-icon-menu"></i></a>
+          </div>
+        </nav>
+        <div class="content-container" id="home">
+          <div class="section home">
+            <div class="container">
+              <div class="row home-row">
+                <div class="col-12 col-xl-4 col-lg-5 col-md-6">
+                  <div class="home-text">
+                    <div class="display-1">RENT A CAR<br>IN 5 MINUTES!</div>
+                    <p class="white mb-5">
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      Compare and book deals for cheapest prices<br /><br />
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      Delivery and collection to/from airport, hotel<br /><br />
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      No booking fees, no credit card charges*<br /><br />
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      Find great value rental rates and exclusive specials
+                      <br /><br />
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      Vehicle change in case of breakdown
+                      <br /><br />
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      Manage your booking online for free
+                      <br /><br />
+                      <i class="fa fa-check-circle-o fa-lg mr-2" aria-hidden="true"></i>
+                      100% comprehensive insurance
+                      <br />
+                    </p><a class="btn btn-secondary btn-xl mr-2 mb-2" target="_blank"
+                      href="/Dashboard.Default.html">EXPLORE NOW <i class="simple-icon-arrow-right"></i></a>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-7 offset-xl-1 col-lg-7 col-md-6 d-block">
+                  <app-last-rental-list></app-last-rental-list>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-12 p-0 mt-5">
+                  <app-card-items></app-card-items>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="container" id="features">
+              <div class="row">
+                <div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center mb-5">
+                  <h1>Why rent a car?</h1>
+                  <p>A lot of people still think that rent-a-car is for the rich, businessmen only and all
+                    the individuals
+                    who can afford more than others. Of course, this is not true, because renting a vehicle pays off, no
+                    matter who you are. In the following, we wrote six reasons why rent-a-car is economically and
+                    otherwise completely justified.
+                  </p>
+                </div>
+              </div>
+              <div class="row feature-row">
+                <div class="col-12 col-md-6 col-lg-5 d-flex align-items-center mt-5">
+                  <div class="d-flex">
+                    <div class="feature-text-container">
+                      <h2>We rent a vehicle so we can travel abroad</h2>
+                      <p>Rent-a-car is an extremely comfortable and practical experience of traveling abroad, whether it’s
+                        business or private. With our own rented vehicle, we get exactly where we want to and when we want
+                        to.<br><br>It gives us the opportunity to explore places more independently, go further and see
+                        things we would otherwise have missed.<br><br>Renting a vehicle is suitable for individuals who
+                        are on a private trip, or for businessmen and commercial travelers, who are expected to form a
+                        formal business relationship, fulfill their official duties and a certain degree of innovation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 offset-lg-1 offset-md-0 position-relative mt-5">
+                  <div class="background-item-1"></div><img alt="feature"
+                    class="feature-image-right feature-image-charts position-relative"
+                    src="../../../../assets/img/cars/acura_PNG129.png">
+                </div>
+              </div>
+              <div class="row feature-row">
+                <div class="col-12 col-md-6 col-lg-6 order-2 order-md-1 mt-5 mb-5"><img alt="feature"
+                    class="feature-image-left feature-image-charts" src="../../../../assets/img/cars/isuzu_PNG52.png"
+                    style="width: 77%;">
+                </div>
+                <div
+                  class="col-12 col-md-6 offset-md-0 col-lg-5 offset-lg-1 d-flex align-items-center order-1 order-md-2 mt-5 mb-5">
+                  <div class="d-flex">
+                    <div class="feature-text-container">
+                      <h2>A great alternative when your car is under repair</h2>
+                      <p>Short-term leases, even for a day or two, are very common. When you need an affordable solution
+                        and flexibility in the form of an independent drive, rent-a-car is practically the only
+                        choice.<br><br>When your car is on an unforeseen repair, contact us immediately, we will offer
+                        you a quality vehicle at the reasonable price. What do you get in return? Freedom, carelessness,
+                        security.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row feature-row">
+                <div class="col-12 col-md-6 col-lg-5 d-flex align-items-center">
+                  <div class="d-flex">
+                    <div class="feature-text-container mt-5 mb-5">
+                      <h2>By hiring a car we avoid certain costs</h2>
+                      <p>Rental is also an excellent choice for a longer period. Cost saving is mainly due to fuel (rented
+                        vehicles are practically new, and therefore their consumption is lower), insurance of cars and
+                        persons (costs are taken over by the company that handles your vehicle).<br><br>When renting a
+                        vehicle, there are no maintenance costs, and the vehicle can be delivered almost anywhere you
+                        want.<br><br>What about rent-a-car? There is simply no such cost at all since we take over all the
+                        care.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 offset-lg-1 offset-md-0 mt-5 mb-5"><img alt="feature"
+                    class="feature-image-right feature-image-charts"
+                    src="../../../../assets/img/cars/mitsubishi_PNG189.png">
+                </div>
+              </div>
+              <div class="row feature-row">
+                <div class="col-12 col-md-6 col-lg-6 order-2 order-md-1 mt-5"><img alt="feature"
+                    class="feature-image-left feature-image-charts" src="../../../../assets/img/cars/hyundai_PNG11231.png"
+                    style="width: 85%;"></div>
+                <div
+                  class="col-12 col-md-6 offset-md-0 col-lg-5 offset-lg-1 d-flex align-items-center order-1 order-md-2 mt-5 mb-5">
+                  <div class="d-flex">
+                    <div class="feature-text-container">
+                      <h2>Travel in style with a rented vehicle</h2>
+                      <p>Let’s be honest, we often want to impress other people with our style and appearance. Since we do
+                        not need a luxurious vehicle every day and is in fact rather expensive, it’s certainly more
+                        convenient to rent such a car<br><br>You do not want to bother about safety or comfort, so it’s a
+                        very good idea to rent our vehicles, which are new (the oldest one is only 1 year old), safe and
+                        super comfortable.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row feature-row">
+                <div class="col-12 col-md-6 col-lg-5 d-flex align-items-center mt-5">
+                  <div class="d-flex">
+                    <div class="feature-text-container">
+                      <h2>A True Test Drive</h2>
+                      <p>Have you been thinking about buying that new car? Rather than just getting the five minutes
+                        around the block with a dealer panting in your ear about all the great features of your potential
+                        new ride, take it for a weekend trip.<br><br>Get to know what you are getting into. Car rental
+                        deals make it affordable to try before you buy, and some car rental companies even sell cars. Take
+                        it out on the highway for a trip, see how it feels to drive in rush hour traffic.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 offset-lg-1 offset-md-0 mt-5"><img alt="feature"
+                    class="feature-image-right feature-image-charts"
+                    src="../../../../assets/img/cars/volkswagen_PNG1778.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="section background">
+            <div class="container" id="layouts">
+              <div class="row">
+                <div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+                  <h1>Structures & Layouts</h1>
+                  <p>We did our best to create layouts for various needs that developers might have and best experience
+                    for users.<br>They are clean and slick. They function well and look good at the same time.</p>
+                </div>
+              </div>
+              <div class="row pt-5">
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/menu-default.jpg">
+                  <h4 class="text-center">Menu Default</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/menu-subhidden.jpg">
+                  <h4 class="text-center">Menu Subhidden</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/menu-hidden.jpg">
+                  <h4 class="text-center">Menu Hidden</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/image-list.jpg">
+                  <h4 class="text-center">Image List</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/thumb-list.jpg">
+                  <h4 class="text-center">Thumb List</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/data-list.jpg">
+                  <h4 class="text-center">Data List</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/details.jpg">
+                  <h4 class="text-center">Details</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5 semi-rounded"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/authentication.jpg">
+                  <h4 class="text-center">Authentication</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/search-result.jpg">
+                  <h4 class="text-center">Search Results</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/spa.jpg">
+                  <h4 class="text-center">Single Page Application</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/data-list-app-menu-hidden.jpg">
+                  <h4 class="text-center">Data List App Menu Hidden</h4>
+                </div>
+                <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-5"><img
+                    class="img-fluid border-radius depth-2 mb-3 semi-rounded"
+                    src="../../../../assets/img/landing-page/layouts/tabs.jpg">
+                  <h4 class="text-center">Tabs</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section mb-0">
+            <div class="container" id="components">
+              <div class="row mb-5">
+                <div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+                  <h1>Components</h1>
+                  <p>We used most popular and well managed open source components with bootstrap components. Combined
+                    them
+                    into even more useful ones. Themed them with same design principles and created a design harmony
+                    between components and layouts.<br><br>From carousels to charts, switches to list we tried to
+                    provide
+                    components that we like to use on our development processes.</p>
+                </div>
+              </div>
+            </div><img class="components-image mb-5 pb-5" src="../../../../assets/img/landing-page/components.jpg">
+          </div>
+          <div class="section background">
+            <div class="container" id="apps">
+              <div class="row">
+                <div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center mb-4">
+                  <h1>Applications</h1>
+                  <p class="section-text">With the help of components and layouts, we created four different
+                    applications.
+                    They are a good way to get you started if you want to build something similar.<br></p>
+                </div>
+              </div>
+              <div class="row screenshots">
+                <div class="col-12 text-center mb-4">
+                  <ul class="nav nav-tabs justify-content-center mb-4" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#library" role="tab">
+                        <p>Library</p>
+                      </a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#survey" role="tab">
+                        <p>Survey</p>
+                      </a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat" role="tab">
+                        <p>Chat</p>
+                      </a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#todo" role="tab">
+                        <p>Todo</p>
+                      </a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active justify-content-center" id="library" role="tabpanel"><a
+                        target="_blank" href="/Apps.MediaLibrary.html"><img alt="app image" class="app-image"
+                          src="../../../../assets/img/landing-page/applications/library.jpg"></a></div>
+                    <div class="tab-pane fade justify-content-center" id="survey" role="tabpanel"><a target="_blank"
+                        href="/Apps.Survey.List.html"><img alt="app image" class="app-image"
+                          src="../../../../assets/img/landing-page/applications/survey.jpg"></a></div>
+                    <div class="tab-pane fade justify-content-center" id="chat" role="tabpanel"><a target="_blank"
+                        href="/Apps.Chat.html"><img alt="app image" class="app-image"
+                          src="../../../../assets/img/landing-page/applications/chat.jpg"></a></div>
+                    <div class="tab-pane fade justify-content-center" id="todo" role="tabpanel"><a target="_blank"
+                        href="/Apps.Todo.List.html"><img alt="app image" class="app-image"
+                          src="../../../../assets/img/landing-page/applications/todo.jpg"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section mb-0">
+            <div class="container" id="themes">
+              <div class="row mb-5">
+                <div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+                  <h1>Themes</h1>
+                  <p>We carefully choosed colors and created 10 different themes with dark and light versions. You may
+                    also create your own themes easily since all the theme related styling is managed by Sass variables.
+                  </p>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Navy Blue</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left bluenavy-light-1"></div>
+                    <div class="color-center bluenavy-light-2"></div>
+                    <div class="color-right bluenavy-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left bluenavy-dark-1"></div>
+                    <div class="color-center bluenavy-dark-2"></div>
+                    <div class="color-right bluenavy-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Olympic Blue</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left blueolympic-light-1"></div>
+                    <div class="color-center blueolympic-light-2"></div>
+                    <div class="color-right blueolympic-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left blueolympic-dark-1"></div>
+                    <div class="color-center blueolympic-dark-2"></div>
+                    <div class="color-right blueolympic-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Yale Blue</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left blueyale-light-1"></div>
+                    <div class="color-center blueyale-light-2"></div>
+                    <div class="color-right blueyale-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left blueyale-dark-1"></div>
+                    <div class="color-center blueyale-dark-2"></div>
+                    <div class="color-right blueyale-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Moss Green</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left greenmoss-light-1"></div>
+                    <div class="color-center greenmoss-light-2"></div>
+                    <div class="color-right greenmoss-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left greenmoss-dark-1"></div>
+                    <div class="color-center greenmoss-dark-2"></div>
+                    <div class="color-right greenmoss-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Lime Green</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left greenlime-light-1"></div>
+                    <div class="color-center greenlime-light-2"></div>
+                    <div class="color-right greenlime-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left greenlime-dark-1"></div>
+                    <div class="color-center greenlime-dark-2"></div>
+                    <div class="color-right greenlime-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Carrot Orange</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left carrotorange-light-1"></div>
+                    <div class="color-center carrotorange-light-2"></div>
+                    <div class="color-right carrotorange-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left carrotorange-dark-1"></div>
+                    <div class="color-center carrotorange-dark-2"></div>
+                    <div class="color-right carrotorange-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Ruby Red</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left rubyred-light-1"></div>
+                    <div class="color-center rubyred-light-2"></div>
+                    <div class="color-right rubyred-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left rubyred-dark-1"></div>
+                    <div class="color-center rubyred-dark-2"></div>
+                    <div class="color-right rubyred-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Monster Purple</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left monsterpurple-light-1"></div>
+                    <div class="color-center monsterpurple-light-2"></div>
+                    <div class="color-right monsterpurple-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left monsterpurple-dark-1"></div>
+                    <div class="color-center monsterpurple-dark-2"></div>
+                    <div class="color-right monsterpurple-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Steel Grey</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left steelgrey-light-1"></div>
+                    <div class="color-center steelgrey-light-2"></div>
+                    <div class="color-right steelgrey-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left steelgrey-dark-1"></div>
+                    <div class="color-center steelgrey-dark-2"></div>
+                    <div class="color-right steelgrey-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 text-center mb-3">
+                  <h4 class="text-center">Granola Yellow</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left granolayellow-light-1"></div>
+                    <div class="color-center granolayellow-light-2"></div>
+                    <div class="color-right granolayellow-light-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  <div class="depth-2 color-container">
+                    <div class="color-left granolayellow-dark-1"></div>
+                    <div class="color-center granolayellow-dark-2"></div>
+                    <div class="color-right granolayellow-dark-3"></div>
+                  </div>
+                </div>
+                <div class="col-12 mb-5"></div>
+                <div class="col-12 mb-5"></div>
+              </div>
+            </div>
+          </div>
+          <div class="section background background-no-bottom mb-0 pb-0">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 offset-0 col-lg-8 offset-lg-2 text-center">
+                  <h1>Enjoying so Far?</h1>
+                  <p>Purchase Dore to get a fresh start with your new project.</p>
+                </div>
+                <div class="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
+                  <div class="text-center mb-3"><a class="btn btn-secondary btn-xl" target="_top"
+                      href="https://1.envato.market/5kAb">BUY NOW</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section footer mb-0">
+            <div class="container">
+              <div class="row footer-row">
+                <div class="col-12 text-right"><a
+                    class="btn btn-circle btn-outline-semi-light footer-circle-button scrollTo" href="#home"
+                    id="footerCircleButton"><i class="simple-icon-arrow-up"></i></a></div>
+                <div class="col-12 text-center footer-content"><a href="#home" class="scrollTo"><img class="footer-logo"
+                      alt="footer logo" src="../../../../assets/logos/white-full.svg"></a></div>
+              </div>
+            </div>
+            <div class="separator mt-5"></div>
+            <div class="container copyright pt-5 pb-5">
+              <div class="row">
+                <div class="col-12"></div>
+                <div class="col-12 text-center">
+                  <p class="mb-0">2020 © ColoredStrategies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

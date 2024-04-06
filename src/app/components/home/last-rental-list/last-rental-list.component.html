@@ -1,1 +1,31 @@
-<p>last-rental-list works!</p>
+<div class="card">
+    <div class="position-absolute card-top-buttons">
+      <button class="btn btn-header-light icon-button">
+        <i class="simple-icon-refresh" (click)="getAllRentalDetails()"></i>
+      </button>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Recent Rentals</h5>
+  
+      <div class="d-flex flex-row mb-3" *ngFor="let rentalDetail of rentalDetails">
+        <a class="d-block position-relative" href="#">
+          <img style="width: 100px;" [src]="getRentalImage(rentalDetail)" alt="Marble Cake"
+            class="list-thumbnail border-0" />
+          <span class="badge badge-pill badge-theme-1 position-absolute badge-top-right">DONE DEAL</span>
+        </a>
+        <div class="pl-3 pt-2 pr-2 pb-2">
+          <a href="#">
+            <p class="list-item-heading">{{rentalDetail.modelName + " " + rentalDetail.modelYear}}</p>
+            <div class="pr-4 d-none d-sm-block">
+              <p class="text-muted mb-1 text-small">{{(rentalDetail.firstName | hideFirstNamePipe) + "
+                " +
+                (rentalDetail.lastName | hideLastNamePipe) + " rented this vehicle for " + (rentalDetail.dailyPrice |
+                currency)}}</p>
+            </div>
+            <div class="text-primary text-small font-weight-medium d-none d-sm-block">
+              {{(rentalDetail.rentDate | date: 'dd/MM') + " - " + (rentalDetail.rentDate | date: 'HH:mm')}}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
