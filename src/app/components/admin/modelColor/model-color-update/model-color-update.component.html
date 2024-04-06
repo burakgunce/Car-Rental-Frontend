@@ -1,1 +1,50 @@
-<p>model-color-update works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Update</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/modelcolors/view/{{modelColorDetail.id}}"
+              *ngIf="modelColorDetail">Model Colors</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Update</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+  
+    <div class="col-12">
+  
+  
+      <div class="card mb-4">
+        <div class="card-header">
+          <div class="ml-2 mt-3">
+            <button type="button" class="btn btn-primary" routerLink="/admin/modelcolors/list"><i
+                class="fa fa-arrow-left"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="modelColorUpdateForm" *ngIf="modelColorUpdateForm" (ngSubmit)="updateModelColor()">
+            <div class="form-group">
+              <label for="modelId">User</label>
+              <select formControlName="modelId" id="modelId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="model.id" *ngFor="let model of models">{{model.name}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="colorId">Color</label>
+              <select formControlName="colorId" id="colorId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="color.id" *ngFor="let color of colors">{{color.name}}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-warning mb-0 mt-1">Update</button>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>

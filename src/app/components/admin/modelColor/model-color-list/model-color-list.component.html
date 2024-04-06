@@ -1,1 +1,54 @@
-<p>model-color-list works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Model Colors</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Model Colors</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row view-filter mb-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-success" routerLink="/admin/modelcolors/add"><i
+                    class="fa fa-plus-circle fa-lg"></i></button>
+              </div>
+              <div class="float-left">
+                <div>
+                  <label>
+                    <input type="search" class="form-control form-control-sm" placeholder="Search By Model Name"
+                      [(ngModel)]="filterText">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="data-table dataTable data-table-feature table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Model</th>
+                <th scope="col">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let modelColorDetail of modelColorDetails | modelColorDetailFilterPipe: filterText; let i = index"
+                (click)="getModelColorDetailViewById(modelColorDetail.id)">
+                <td><b>{{i + 1}}</b></td>
+                <td>{{modelColorDetail.modelName}}</td>
+                <td>{{modelColorDetail.colorName}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
