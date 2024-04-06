@@ -1,1 +1,51 @@
-<p>user-operation-claim-add works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Add</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/useroperationclaims/list">User Operation Claims</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+  
+    <div class="col-12">
+  
+  
+      <div class="card mb-4">
+        <div class="card-header">
+          <div class="ml-2 mt-3">
+            <button type="button" class="btn btn-primary" routerLink="/admin/useroperationclaims/list"><i
+                class="fa fa-arrow-left"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="userOperationClaimAddForm" (ngSubmit)="addUserOperationClaim()">
+            <div class="form-group">
+              <label for="userId">User</label>
+              <select formControlName="userId" id="userId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="user.id" *ngFor="let user of users">{{user.firstName + " " + user.lastName + " - (" +
+                  user.email + ")"}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="operationClaimId">Operation Claim</label>
+              <select formControlName="operationClaimId" id="operationClaimId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="operationClaim.id" *ngFor="let operationClaim of operationClaims">
+                  {{operationClaim.name}}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success mb-0 mt-1">Submit</button>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>

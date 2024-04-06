@@ -1,1 +1,51 @@
-<p>rental-add works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Add</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/rentals/list">Rentals</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+  
+    <div class="col-12">
+  
+  
+      <div class="card mb-4">
+        <div class="card-header">
+          <div class="ml-2 mt-3">
+            <button type="button" class="btn btn-primary" routerLink="/admin/rentals/list"><i
+                class="fa fa-arrow-left"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="rentalAddForm" (ngSubmit)="addRental()">
+            <div class="form-group">
+              <label for="carId">Car</label>
+              <select formControlName="carId" id="carId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="carDetail.id" *ngFor="let carDetail of carDetails">{{carDetail.modelName + " " +
+                  carDetail.modelYear + " " + (carDetail.brandName | uppercase) + " - " + carDetail.colorName}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="customerId">Customer</label>
+              <select formControlName="customerId" id="customerId" class="form-control">
+                <option label="&nbsp;">&nbsp;</option>
+                <option [ngValue]="customerDetail.id" *ngFor="let customerDetail of customerDetails">
+                  {{customerDetail.firstName + " " + customerDetail.lastName}}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success mb-0 mt-1">Submit</button>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>

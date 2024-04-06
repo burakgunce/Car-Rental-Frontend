@@ -1,1 +1,63 @@
-<p>operation-claim-view works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>View</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/operationclaims/list">Operation Claims</a></li>
+          <li class="breadcrumb-item active" aria-current="page">View</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card" *ngIf="operationClaim">
+        <div class="card-header">
+          <div class="row mt-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-warning"
+                  routerLink="/admin/operationclaims/update/{{operationClaim.id}}"><i
+                    class="fa fa-pencil-square-o fa-lg"></i></button>
+                <button type="button" class="btn btn-danger ml-2" data-toggle="modal"
+                  data-target="#removeOperationClaim"><i class="fa fa-trash fa-lg"></i></button>
+                <div class="modal fade" id="removeOperationClaim" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">This Process Cannot Be Undone!
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Do you really want to delete this operation claim?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger"
+                          routerLink="/admin/operationclaims/remove/{{operationClaim.id}}">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="float-left">
+                <button type="button" class="btn btn-primary" routerLink="/admin/operationclaims/list"><i
+                    class="fa fa-arrow-left fa-lg"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center"><b>Selected Operation Claim Details:</b></h5>
+          <hr class="my-4">
+          <p class="card-text"><b>Name:</b>&emsp;{{operationClaim.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

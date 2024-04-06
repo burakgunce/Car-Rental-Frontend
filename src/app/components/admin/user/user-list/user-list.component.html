@@ -1,1 +1,57 @@
-<p>user-list works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Users</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Users</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row view-filter mb-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-success" routerLink="/admin/users/add"><i
+                    class="fa fa-plus-circle fa-lg"></i></button>
+              </div>
+              <div class="float-left">
+                <div>
+                  <label>
+                    <input type="search" class="form-control form-control-sm" placeholder="Search By Last Name"
+                      [(ngModel)]="lastNameFilterText">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="data-table dataTable data-table-feature table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users | userLastNameFilterPipe: lastNameFilterText; let i = index"
+                (click)="getUserViewById(user.id)">
+                <td><b>{{i + 1}}</b></td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.status}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

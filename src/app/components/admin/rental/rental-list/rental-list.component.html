@@ -1,1 +1,65 @@
-<p>rental-list works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>Rentals</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Rentals</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row view-filter mb-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-success" routerLink="/admin/rentals/add"><i
+                    class="fa fa-plus-circle fa-lg"></i></button>
+              </div>
+              <div class="float-left">
+                <div>
+                  <label>
+                    <input type="search" class="form-control form-control-sm" placeholder="Search By First Name"
+                      [(ngModel)]="filterText">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="data-table dataTable data-table-feature table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Year</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Rent Hour Date</th>
+                <th scope="col">Rent Day Date</th>
+                <th scope="col">Return Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let rentalDetail of rentalDetails | rentalDetailFirstNameFilterPipe: filterText"
+                (click)="getRentalDetailViewById(rentalDetail.id)">
+                <td><b>{{rentalDetail.id}}</b></td>
+                <td>{{rentalDetail.brandName}}</td>
+                <td>{{rentalDetail.modelName}}</td>
+                <td>{{rentalDetail.modelYear}}</td>
+                <td>{{rentalDetail.firstName}}</td>
+                <td>{{rentalDetail.lastName}}</td>
+                <td>{{rentalDetail.rentDate | date: 'HH:mm'}}</td>
+                <td>{{rentalDetail.rentDate | date: 'dd/MM/yyyy'}}</td>
+                <td>{{rentalDetail.returnDate | date}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

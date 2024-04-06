@@ -1,1 +1,68 @@
-<p>rental-view works!</p>
+<div class="row">
+    <div class="col-12">
+      <h1>View</h1>
+      <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-0">
+          <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
+          <li class="breadcrumb-item"><a routerLink="/admin/rentals/list">Rentals</a></li>
+          <li class="breadcrumb-item active" aria-current="page">View</li>
+        </ol>
+      </nav>
+      <div class="separator mb-5"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="card" *ngIf="rentalDetail">
+        <div class="card-header">
+          <div class="row mt-3">
+            <div class="col-sm-12">
+              <div class="float-right">
+                <button type="button" class="btn btn-warning" routerLink="/admin/rentals/update/{{rentalDetail.id}}"><i
+                    class="fa fa-pencil-square-o fa-lg"></i></button>
+                <button type="button" class="btn btn-danger ml-2" data-toggle="modal" data-target="#removeRental"><i
+                    class="fa fa-trash fa-lg"></i></button>
+                <div class="modal fade" id="removeRental" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">This Process Cannot Be Undone!
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Do you really want to delete this rental?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger"
+                          routerLink="/admin/rentals/remove/{{rentalDetail.id}}">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="float-left">
+                <button type="button" class="btn btn-primary" routerLink="/admin/rentals/list"><i
+                    class="fa fa-arrow-left fa-lg"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center"><b>Selected Car Details:</b></h5>
+          <hr class="my-4">
+          <p class="card-text"><b>Brand:</b>&emsp;{{rentalDetail.brandName}}</p>
+          <p class="card-text"><b>Model:</b>&emsp;{{rentalDetail.modelName}}</p>
+          <p class="card-text"><b>Year:</b>&emsp;{{rentalDetail.modelYear}}</p>
+          <p class="card-text"><b>First Name:</b>&emsp;{{rentalDetail.firstName}}</p>
+          <p class="card-text"><b>Last Name:</b>&emsp;{{rentalDetail.lastName}}</p>
+          <p class="card-text"><b>Rent Date:</b>&emsp;{{rentalDetail.rentDate}}</p>
+          <p class="card-text"><b>Return Date:</b>&emsp;{{rentalDetail.returnDate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

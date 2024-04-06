@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-remove',
   templateUrl: './user-remove.component.html',
-  styleUrl: './user-remove.component.css'
+  styleUrls: ['./user-remove.component.css']
 })
-export class UserRemoveComponent {
+export class UserRemoveComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
