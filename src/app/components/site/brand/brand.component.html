@@ -1,1 +1,13 @@
-<p>brand works!</p>
+<div class="mb-3">
+    <input type="text" [(ngModel)]="filterText" class="form-control" placeholder="search for brand name">
+  </div>
+  <ul class="list-group mb-3">
+    <a *ngIf="!filterText" (click)="abortViewCurrentBrand(); setViewAllBrand()" [class]="getAllBrandClass()"
+      routerLink="/cars">All brands</a>
+    <a (click)="abortViewAllBrand(); setViewCurrentBrand(); setCurrentBrand(brand)" routerLink="/cars/brand/{{brand.id}}"
+      *ngFor="let brand of brands | brandFilterPipe: filterText" [class]="getCurrentBrandClass(brand)">
+      {{brand.name}}</a>
+  </ul>
+  <div *ngIf="filterText" class="alert alert-success mb-3">
+    {{filterText}} aradınız.
+  </div>

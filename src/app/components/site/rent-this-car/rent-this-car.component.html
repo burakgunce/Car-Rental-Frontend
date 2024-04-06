@@ -1,1 +1,60 @@
-<p>rent-this-car works!</p>
+<div *ngIf="availability === true">
+    <div class="jumbotron">
+      <h1 class="display-5">Car is available right now!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
+        calling extra attention
+        to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the
+        larger
+        container.
+      </p>
+      <p class="lead  mb-0">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
+  </div>
+  
+  <div *ngIf="availability === false">
+    <h2>Car is not available right now!</h2>
+    <hr class="my-4">
+    <p>Car is rented by another customer. <a routerLink="/site" class="text-info">Click here</a> to back to the
+      explore
+      page.
+    </p>
+  </div>
+  
+  <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#addToCart">Add to Cart</button>
+  <div class="modal fade" id="addToCart" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Enter the dates:
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2>Angular Date Range Picker Demo</h2>
+          <mat-form-field appearance="legacy">
+            <mat-label>Choose Date Range</mat-label>
+            <mat-date-range-input [rangePicker]="picker" [formGroup]="dateRangeForm">
+              <input matStartDate formControlName="start" placeholder="Start Date">
+              <input matEndDate formControlName="end" placeholder="End Date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+          <h2>
+            Start: {{dateRangeForm.value.start | date}}
+            End: {{dateRangeForm.value.end | date}}
+          </h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" routerLink="/admin/brands/remove/{{10}}">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>

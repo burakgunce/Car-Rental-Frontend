@@ -1,0 +1,15 @@
+.border-3 {
+    border-width: 5px !important;
+  }
+  
+  .clickable-car-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 1.5em;
+  }
+  
+  .clickable-car-card:hover {
+    transform: scale(1.1);
+  }

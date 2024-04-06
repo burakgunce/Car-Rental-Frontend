@@ -1,1 +1,13 @@
-<p>color works!</p>
+<div class="mb-3">
+    <input type="text" [(ngModel)]="filterText" class="form-control" placeholder="search for color name">
+  </div>
+  <ul class="list-group mb-3">
+    <a *ngIf="!filterText" (click)="abortViewCurrentColor(); setViewAllColor()" [class]="getAllColorClass()"
+      routerLink="/cars">All colors</a>
+    <a (click)="abortViewAllColor(); setViewCurrentColor(); setCurrentColor(color)" routerLink="/cars/color/{{color.id}}"
+      *ngFor="let color of colors | colorFilterPipe: filterText" [class]="getCurrentColorClass(color)">
+      {{color.name}}</a>
+  </ul>
+  <div *ngIf="filterText" class="alert alert-success mb-3">
+    {{filterText}} aradınız.
+  </div>

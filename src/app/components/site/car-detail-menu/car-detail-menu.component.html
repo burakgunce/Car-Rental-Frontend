@@ -1,1 +1,39 @@
-<p>car-detail-menu works!</p>
+<div class="card mt-3">
+    <div class="card-body">
+      <div class="float-left">
+        <app-car-detail-filter [selectedBrandId]=selectedBrandId [selectedColorId]=selectedColorId
+          [minDailyPrice]=minDailyPrice [maxDailyPrice]=maxDailyPrice></app-car-detail-filter>
+      </div>
+      <div class="float-right">
+        <label for="modelSearch" class="has-float-label">
+          <input type="text" class="form-control" [(ngModel)]="filterText" id="modelSearch">
+          <span>Search By Model Name</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-2 clickable-car-card" *ngFor="let carDetail of carDetails | carDetailModelFilterPipe: filterText"
+      routerLink="/site/cars/car-detail-page/{{carDetail.id}}">
+      <div class="card border-top border-secondary border-3">
+        <img [src]="getCarImage(carDetail)" class="card-img-top border-bottom border-secondary border-3 rounded-bottom"
+          alt="{{carDetail.modelName}}-image" style="width: 300px; height: 180px;
+          margin-left: auto;
+          margin-right: auto;
+          max-height:100%; max-width:100%;">
+        <span class="badge badge-pill badge-danger position-absolute badge-top-left">{{carDetail.colorName |
+          uppercase}}
+        </span>
+        <span class="badge badge-pill badge-theme-1 position-absolute badge-top-right">{{carDetail.brandName |
+          uppercase}}</span>
+        <div class="card-body text-center">
+          <b>
+            <p class="list-item-heading">{{carDetail.modelName}} {{carDetail.modelYear}} - <span
+                class="text-success">{{carDetail.dailyPrice |
+                currency}}</span>
+            </p>
+          </b>
+        </div>
+      </div>
+    </div>
+  </div>

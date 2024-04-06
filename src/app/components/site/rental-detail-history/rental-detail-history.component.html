@@ -1,1 +1,20 @@
-<p>rental-detail-history works!</p>
+<table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Rent Hour Date</th>
+        <th scope="col">Rent Day Date</th>
+        <th scope="col">Return Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rentalDetail of rentalDetails">
+        <td>{{rentalDetail.firstName | hideFirstNamePipe}}</td>
+        <td>{{rentalDetail.lastName | hideLastNamePipe}}</td>
+        <td>{{rentalDetail.rentDate | date: 'HH:mm'}}</td>
+        <td>{{rentalDetail.rentDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{rentalDetail.returnDate | date}}</td>
+      </tr>
+    </tbody>
+  </table>
