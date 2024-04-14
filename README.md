@@ -1,27 +1,9 @@
-# Carrental
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+# Car Rental Frontend (Angular)
 
-## Development server
+This project constitutes the frontend part of a web application used to manage vehicle rental operations. Developed using the Angular framework, this frontend provides users with functionalities such as listing vehicles, viewing details, making vehicle reservations, and for the admin panel, adding new brands, models, colors, and vehicles. The project features a user-friendly interface aiming to facilitate vehicle rental operations in an easy and efficient manner.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## General Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![car-rental-frontend-general-structure](https://github.com/burakgunce/Car-Rental-Frontend/assets/87397100/54d21cb0-aea5-4a25-9aab-6587a5ac1e29)
